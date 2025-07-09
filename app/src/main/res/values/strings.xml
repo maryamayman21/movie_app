@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="read_more">Read More</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="movie_fragment_label">Movie Label</string>
+    <string name="home_fragment_label">Home Label</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

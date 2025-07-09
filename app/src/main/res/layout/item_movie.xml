@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <!-- Movie Poster Image -->
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/movie_poster"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <!-- Movie Title -->
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Under the Dome" />
+
+        <!-- Genres Horizontal Chip Layout -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/genresLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            app:flexWrap="wrap"
+            app:alignItems="flex_start"
+            app:justifyContent="flex_start">
+
+            <!-- Genres will be added programmatically as chips -->
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                tools:text="Drama" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <!-- Summary (with limited lines and expand capability) -->
+        <TextView
+            android:id="@+id/movieSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            tools:text="Under the Dome is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome..." />
+
+        <!-- Optional "Read More" button -->
+        <Button
+            android:id="@+id/readMoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:text="@string/read_more"
+            android:textAllCaps="false"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
