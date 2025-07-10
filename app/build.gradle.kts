@@ -3,7 +3,9 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
    id("com.google.devtools.ksp")
-  // kotlin("kapt")
+    id("dagger.hilt.android.plugin")
+
+    // kotlin("kapt")
 }
 
 android {
@@ -81,8 +83,8 @@ dependencies {
     implementation ("androidx.room:room-ktx:2.6.0")
 
     //hilt
-    implementation ("com.google.dagger:hilt-android:2.44")
-    ksp("com.google.dagger:hilt-compiler:2.44")
+    implementation ("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:hilt-compiler:2.51.1")
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 }

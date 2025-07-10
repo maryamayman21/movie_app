@@ -19,9 +19,7 @@ sealed class AppError(
     object NotFoundError : AppError(message = "Resource not found")
 }
 
-class ApiErrorHandler
-@Inject
-constructor()
+class ApiErrorHandler @Inject constructor()
 {
     fun handle(throwable: Throwable): AppError = when (throwable) {
         is IOException -> if (throwable is SocketTimeoutException) {
